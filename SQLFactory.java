@@ -60,6 +60,20 @@ public class SQLFactory{
         System.out.println(ped1);
         pedido1.printPedido();
 
+//-------------Caso quiser excluir as tabelas para fazer o processo anterior:
+// Produto produto1 = new Produto();
+// produto1.id = 2;
+// boolean delete2 = Database.deletarRegistro(produto1);
+
+
+// Estoque estoque1 = new Estoque();
+// estoque1.id = 1;
+// boolean delete3 = Database.deletarRegistro(estoque1);
+
+
+// Pedido pedido1 = new Pedido();
+// pedido1.valor = 100;
+// boolean delete4 = Database.deletarRegistro(pedido1);
         
         // System.out.println("-------SELECT-------");
         // System.out.println(produto1.selectSQL());
