@@ -5,9 +5,9 @@ public class SQLFactory{
         Produto produto1 = new Produto();
 
         produto1.id = 1;
-        produto1.descricao = "laranja";
+        produto1.descricao = "jeans";
         produto1.um = "kg";
-        produto1.preco = 12.5;
+        produto1.preco = 25.50;
         
         boolean prod1 = Database.inserirRegistro(produto1);
         System.out.println(prod1);
@@ -40,7 +40,7 @@ public class SQLFactory{
         Estoque estoque1 = new Estoque();
 
         estoque1.id = 1;
-        estoque1.produto_id = 1;
+        estoque1.produto_id = 2;
         estoque1.quantidade = 1;
 
         boolean estoq1 = Database.inserirRegistro(estoque1);
@@ -52,15 +52,15 @@ public class SQLFactory{
         Pedido pedido1 = new Pedido();
 
         pedido1.id = 1;
-        pedido1.produto_id = 1;
-        pedido1.quantidade = 1;
+        pedido1.produto_id = 2;
+        pedido1.quantidade = 2;
         pedido1.valor = 100;
 
         boolean ped1 = Database.inserirRegistro(pedido1);
         System.out.println(ped1);
         pedido1.printPedido();
 
-//-------------Caso quiser excluir as tabelas para fazer o processo anterior:
+//-------------Caso quiser excluir as tabelas para fazer o processo anterior é só descomentar ou excluir a coluna no banco manualmente:
 // Produto produto1 = new Produto();
 // produto1.id = 2;
 // boolean delete2 = Database.deletarRegistro(produto1);
@@ -72,20 +72,21 @@ public class SQLFactory{
 
 
 // Pedido pedido1 = new Pedido();
-// pedido1.valor = 100;
+// pedido1.id = 1;
 // boolean delete4 = Database.deletarRegistro(pedido1);
+
         
         // System.out.println("-------SELECT-------");
         // System.out.println(produto1.selectSQL());
 
         // System.out.println("-------INSERT-------");
-        // System.out.println(exemplo.insertSQL());
+        // System.out.println(produto1.insertSQL());
 
         // System.out.println("-------UPDATE-------");
-        // System.out.println(exemplo.updateSQL());
+        // System.out.println(produto1.updateSQL());
 
         // System.out.println("-------DELETE-------");
-        // System.out.println(exemplo.deleteSQL());
+        // System.out.println(produto1.deleteSQL());
     
     }
 }
